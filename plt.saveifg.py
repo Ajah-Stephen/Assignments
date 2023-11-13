@@ -5,24 +5,8 @@ Created on Thu Nov  9 21:42:29 2023
 @author: Ajah Stephen Chidi
 """
 
-"""
-DATASET SUMMARY
-The dataset demostrate crime statistics of numerous crime and their illegal act in Bangladesh,
-a populated country densely in Asia acros period of years, from the 2010-2019.
 
-To understand the visualization and make insights, 3 types of visualization will be introduced.
-
-Line plot: The characteristics of line plot is to display data points over a priod of time, for
-this reason a crime case will be displayed for each crime case over the years.
-
-Pie chart: pie chart shows and displays group of element in relative proportion to one another,
-this will help show propotion of crime in relation to each other.
-
-Bar chart: bar chart help us to check and compare the different data point. it employed and
-show the total crime case across the years.
-
-
-
+# GitHub: https://github.com/Ajah-Stephen/Assignments/blob/main/plt.saveifg.py
 # Link to Dataset: https://www.kaggle.com/datasets/firozkabir1/crime-statistics-of-bangladesh-2010-2019/   
   
 
@@ -46,7 +30,8 @@ print(illegal_act.info())
 print(illegal_act.isna().sum())
 
 # Showing the columns needed our visualization 
-illegal_act = illegal_act[['Year', 'Woman & Child Repression', 'Theft', 'Explosive', 'Smuggling']]
+illegal_act = illegal_act[['Year', 'Woman & Child Repression', 
+                           'Theft', 'Explosive', 'Smuggling']]
 print(illegal_act)
 
 # Agregating the columns to get the Illegal Act cases in a year
@@ -54,7 +39,8 @@ illegal_act = illegal_act.groupby("Year").sum()
 print(illegal_act)
 
 # Declare function to plot Illegal Act cases 
-def plot_line(variable_x, variable_y, xlabel, ylabel, xlim, title, color='', label=''):
+def plot_line(variable_x, variable_y, xlabel, ylabel, xlim, 
+              title, color='', label=''):
     """
     Create a function that plots a line graph for the illegal cases
 
@@ -89,22 +75,26 @@ def plot_line(variable_x, variable_y, xlabel, ylabel, xlim, title, color='', lab
     plt.savefig('plot_line.png')
     
 # Plotting lineplot for Theft vs Year
-plot_line(illegal_act.index, illegal_act['Theft'], 'Year', 'No of Theft Cases',
+plot_line(illegal_act.index, illegal_act['Theft'], 
+          'Year', 'No of Theft Cases',
           True, 'Crime Statistics Of Bangladesh 2010-2019', 'blue',
           'Theft')
 
 # Plotting lineplot for Smuggling Vs Year
-plot_line(illegal_act.index, illegal_act['Smuggling'], 'Year', 'No of Smuggling Cases',
+plot_line(illegal_act.index, illegal_act['Smuggling'], 'Year', 
+          'No of Smuggling Cases',
           True, 'Crime Statistics Of Bangladesh 2010-2019', 'r',
           'Smuggling')
 
 # Plotting lineplot for Explosive Vs Year
-plot_line(illegal_act.index, illegal_act['Explosive'], 'Year', 'No of Explosive Cases',
+plot_line(illegal_act.index, illegal_act['Explosive'], 'Year', 
+          'No of Explosive Cases',
           True, 'Crime Statistics Of Bangladesh 2010-2019', 'g',
           'Explosive')
 
 # Plotting lineplot for Woman & Child Repression
-plot_line(illegal_act.index, illegal_act['Woman & Child Repression'], 'Year', 'No of Woman & Child Repression Cases',
+plot_line(illegal_act.index, illegal_act['Woman & Child Repression'], 
+          'Year', 'No of Woman & Child Repression Cases',
           True, 'Crime Statistics Of Bangladesh 2010-2019', 'y',
           ' Woman & Child Repression')
 
