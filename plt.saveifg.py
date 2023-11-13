@@ -103,13 +103,15 @@ plot_line(illegal_act.index, illegal_act['Woman & Child Repression'],
 plt.show()
 """
 LINE PLOT INTERPRETATION
-The provision of this graph gives more understanding for 4 illegail act: Theft, Smuggling, Explosive,
-Woman & Child Repression and their total reported cases in Bangladesh for 2010 to 2019.
-It observeed from the graph that theft occurances relatively start from 2010 and following degreasing. 
-Smuggling degrease form 2010 to 2011 and slighly increase in 2012 and drop again in 2016 and the following years.
-Explosive appeared to be steady but slightly increase in 2013 and 2018.
-The Woman & Child Repression appeared to be fluctuating yearly, Hence there is increase in the year 2011 and 
-followed by degrease in 2013 and increase again in 2014 to 15 before declining.   
+The provision of this graph gives more understanding for 4 illegail act: 
+Theft, Smuggling, Explosive,Woman & Child Repression and their total reported 
+cases in Bangladesh for 2010 to 2019.It observeed from the graph that theft 
+occurances relatively start from 2010 and following degreasing. Smuggling 
+degrease form 2010 to 2011 and slighly increase in 2012 and drop again in 2016 
+and the following years.Explosive appeared to be steady but slightly increase 
+in 2013 and 2018.The Woman & Child Repression appeared to be fluctuating 
+yearly, Hence there is increase in the year 2011 and followed by degrease in 
+2013 and increase again in 2014 to 15 before declining.   
 
 All the 4 Illegal Act reduced in the year 2019
 """
@@ -155,7 +157,8 @@ def pie_chat(variable, variable_label, lable = '', title = '', **others):
     plt.show()
     
 # plot the pie chat
-pie_chat(total_occurances, illegal_act_cases, title = 'Crime Statistics Of Bangladesh 2010-2019',
+pie_chat(total_occurances, illegal_act_cases, title = 
+         'Crime Statistics Of Bangladesh 2010-2019',
              autopct= '%2.1f%%', explode = [0,0.1,0,0.], shadow=True)
 
 # Calculate the total occurances in a year
@@ -164,18 +167,20 @@ print(yearly_occurances)
 
 # Total data for yearly occurances
 year = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019] 
-illegal_act_year = [32897, 36183, 36412, 34927, 36259, 34935, 29723, 28867, 27625, 2024]
+illegal_act_year = [32897, 36183, 36412, 34927, 36259, 34935, 29723, 
+                    28867, 27625, 2024]
 
 """
 THE PIE CHART INTERPRETATION 
-It is concluded that all the 4 illegal acts were recorded and show Woman & Child Repression
-as the with 58.4%, followed by Theft with 22.1%, followed by Smuggling 17.1% and next is 
-Explosive with 1.7% of illegal act.
+It is concluded that all the 4 illegal acts were recorded and show Woman & 
+Child Repressionas the with 58.4%, followed by Theft with 22.1%, followed by 
+Smuggling 17.1% and next is Explosive with 1.7% of illegal act.
 """
 
 
 # Defined function for a plot of graph selected as Illegal Act cases yearly
-def bar_chart(x_variable, y_variable, xlabel, ylabel, title, xticks = None, **others):
+def bar_chart(x_variable, y_variable, xlabel, ylabel, title, 
+              xticks = None, **others):
     """
     Create function to plot a bar chart
     
@@ -216,8 +221,9 @@ bar_chart(year, yearly_occurances, 'Year', 'No of occurances',
 """
 
 THE BAR CHART INTERPRETATION
-It is observed that bar chart started increasing from the first year 2010 to 2012 and 
-reduced 2013 and pick up again to 2014 before declining to 2019 as the lowest.
+It is observed that bar chart started increasing from the first year 2010 to 
+2012 and reduced 2013 and pick up again to 2014 before declining to 2019 as 
+the lowest.
 
 # Plot style selection 
 plt.style.use("ggplot")
