@@ -1,4 +1,4 @@
-This project analyzes crime data in Bangladesh from 2010 to 2019, based on official police records. It focuses on four main crime categories:
+This project analyses crime data in Bangladesh from 2010 to 2019, based on official police records. It focuses on four main crime categories:
 
 - Theft  
 - Smuggling  
